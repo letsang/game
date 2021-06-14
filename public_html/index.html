@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Kavivanar" rel="stylesheet">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+			#message{
+				position:absolute;
+				left: 50%;
+				top: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				font-family: 'Kavivanar', san-serif;
+				font-size: 40px;
+				width:80%;
+				max-width:280px;
+				padding: 15px 15px 50px 15px;
+				text-align: center;
+				display:none;
+				align-content: center;
+				justify-content: center;
+				background-color: aliceblue;
+				border: medium solid #3D455C;
+				border-radius: 20px;
+				color: #3D455C;
+				z-index: 99;
+			}
+			#message_ok{
+				position: absolute;
+				bottom: 10px;
+				padding: 10px 20px 10px 20px;
+				font-family: sans-serif;
+				font-size: 20px;
+				background-color: #3D455C;
+				color: #fff;
+				border-radius: 8px;
+				border: medium solid #696882;
+			}
+			.input-chat{
+				width: 78%;
+				height: 30px;
+				border-radius: 5px;
+				display: inline-block;
+				border: none;
+				padding: 0px 0px;
+				font-size: 11px;
+				color: black;
+				opacity: 20%;
+				user-select: none;
+			}
+			.button-chat{
+				width: 20%;
+				height: 30px;
+				display: inline-block;
+				float: right;
+				background: white;
+				border: none;
+				border-radius: 5px;
+				font-size: 10px;
+				color: black;
+				font-weight: bold;
+				opacity: 20%;
+			}
+			.chat-field{
+				position: absolute;
+				width: 100%;
+				height: 50px;
+				background: transparent;
+				bottom: 0px;
+			}
+			#chats{
+				background-color: transparent;
+				list-style: none;
+				position:absolute;
+				padding-left:20px;
+			}
+			input {
+				outline:none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul id="chats"></ul>
+		<div id="message">
+			<p id="message_text"></p>
+			<button id="message_ok">OK</button>
+		</div>
+		<div class="chat-field">
+			<form autocomplete="off" style="padding-left:10px;padding-right:10px;">
+				<input class="input-chat" type="text" id="text_chat">
+				<button class="button-chat">Send</button>
+			</form>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/92/three.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="socket.io/socket.io.js"></script>
+		<script src="libs/inflate.min.js"></script>
+		<script src="libs/FBXLoader.js"></script>
+		<script src="libs/Detector.js"></script>
+		<script src="libs/toon3d.js"></script>
+		<script src="game.js"></script>
+		<script>
+			var game;
+			document.addEventListener("DOMContentLoaded", function(){ game = new Game(); });
+		</script>
+	</body>
+</html>
+
