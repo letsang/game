@@ -474,7 +474,7 @@ class PlayerLocal extends Player{
 		super(game, model);
 		
 		const player = this;
-		const socket = io();
+		const socket = io({transports: ['websocket']});
 		socket.on('setId', function(data){
 			player.id = data.id;
 		});
