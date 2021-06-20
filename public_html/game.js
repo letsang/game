@@ -197,7 +197,7 @@ class Game{
 			forward = 0;
 			if (Math.abs(turn)>0.1){
 				if (this.player.action != 'Turn') this.player.action = 'Turn';
-			}else if (this.player.action!="Idle"){
+			}else if (this.player.action !="Idle"){
 				this.player.action = 'Idle';
 			}
 		}
@@ -247,7 +247,7 @@ class Game{
 		
 		this.mouse = this.getMousePosition(clientX, clientY);
 	}
-	
+/*	
 	showMessage(msg, fontSize=20, onOK=null){
 		const txt = document.getElementById('message_text');
 		txt.innerHTML = msg;
@@ -267,7 +267,7 @@ class Game{
 		}
 		panel.style.display = 'flex';
 	}
-	
+*/	
 	onWindowResize() {
 		this.camera.aspect = window.innerWidth / window.innerHeight;
 		this.camera.updateProjectionMatrix();
@@ -403,7 +403,7 @@ class Player{
 			
 			const textureLoader = new THREE.TextureLoader();
 			
-			textureLoader.load(`${game.assetsPath}images/SimplePeople_${model}_${colour}.png`, function(texture){
+			textureLoader.load(`${game.assetsPath}images/${model}_Skin.png`, function(texture){
 				object.traverse( function ( child ) {
 					if ( child.isMesh ){
 						child.material.map = texture;
