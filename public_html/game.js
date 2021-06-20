@@ -366,7 +366,7 @@ class Player{
 		colour = colours[Math.floor(Math.random()*colours.length)];
 									
 		if (options===undefined){
-			const people = ['Alesia'];
+			const people = ['Kermit'];
 			model = people[Math.floor(Math.random()*people.length)];
 		}else if (typeof options =='object'){
 			this.local = false;

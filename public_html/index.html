@@ -89,15 +89,11 @@
 
 	<body>
 		<ul id="chats"></ul>
-		<div class="chat-field">
+		<div class="chat-field" style="position:absolute;z-index:100;">
 			<form autocomplete="off" style="padding-left:10px;padding-right:10px;">
 				<input class="input-chat" type="text" id="text_chat">
 				<button class="button-chat">Send</button>
 			</form>
-		</div>
-		<div id="message">
-			<p id="message_text"></p>
-			<button id="message_ok">OK</button>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/92/three.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
